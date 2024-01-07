@@ -4,27 +4,30 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-export default function Principal() {
+function Principal(props: any) {
     return (
+
         <Card sx={{ maxWidth: 345 }}>
             <CardMedia
-                sx={{ height: 140 }}
-                image="./img/rey_recesvinto.png"
-                title="green iguana"
+                sx={{ height: 200 }}
+                image={props.image}
+                title="kung fu panda"
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    kung fu panda
+                    {props.titulo}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Es un panda gigante que de manera improbable es elegido como el Guerrero Dragón. Él es hijo adoptivo del Sr.
-                    Ping, y es uno de los estudiantes del maestro Shifu. La profecía se refiere a Po como el Guerrero Dragón o guerrero de blanco y negro.
+                    {props.descripcion}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Comprar</Button>
-                <Button size="small" >Agregar al carrito</Button>
+                <Button sx={{ mr: 8 }} size="small">Comprar</Button>
+                <Button size="small">Agregar al carrito</Button>
             </CardActions>
         </Card>
+
     );
 }
+
+export default Principal;   
