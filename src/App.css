@@ -1,19 +1,9 @@
 .App {
   text-align: center;
-
 }
+
+
 
 .App-link {
   color: #0bcaff;
-}
-
-.contenedorPrincipal {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 700px) {
-  .contenedorPrincipal {
-    display: inline-block;
-  }
 }
